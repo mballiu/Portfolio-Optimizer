@@ -198,7 +198,7 @@ const en = {
   printPeriod: "Period",
   printMode: "Mode",
   error: { title: "Error" },
-  footer: "Portfolio Optimizer © 2026 All rights reserved",
+  footer: "Portfolio Optimizer [Marios Balliu] © 2026 All rights reserved",
 };
 
 const el = {
@@ -396,7 +396,8 @@ const el = {
   printPeriod: "Περίοδος",
   printMode: "Τρόπος",
   error: { title: "Σφάλμα" },
-  footer: "Portfolio Optimizer © 2026 Με επιφύλαξη παντός δικαιώματος",
+  footer:
+    "Portfolio Optimizer [Marios Balliu] © 2026 Με επιφύλαξη παντός δικαιώματος",
 };
 
 const languages = { en, el };
