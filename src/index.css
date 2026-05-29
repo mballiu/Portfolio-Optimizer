@@ -1,0 +1,210 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-base: #0d1117;
+  --color-bg-card: #161b27;
+  --color-bg-elevated: #1c2333;
+  --color-bg-border: #30363d;
+  --color-text-primary: #e6edf3;
+  --color-text-secondary: #8b949e;
+  --color-text-muted: #484f58;
+  --color-accent-blue: #2f81f7;
+  --color-accent-green: #3fb950;
+  --color-accent-yellow: #d29922;
+  --color-accent-red: #f85149;
+  --color-accent-purple: #8957e5;
+}
+
+:root:not(.dark) {
+  --color-bg-base: #ffffff;
+  --color-bg-card: #f6f8fa;
+  --color-bg-elevated: #eaeef2;
+  --color-bg-border: #d0d7de;
+  --color-text-primary: #1f2328;
+  --color-text-secondary: #656d76;
+  --color-text-muted: #9198a1;
+}
+
+* {
+  border-color: var(--color-bg-border);
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 20mm;
+  }
+
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 11pt !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body > *:not(#print-area) {
+    display: none !important;
+  }
+
+  #print-area {
+    display: block !important;
+    position: static !important;
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  #print-area .print-header {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #333;
+  }
+
+  #print-area .print-header h1 {
+    font-size: 20pt;
+    font-weight: bold;
+    margin: 0 0 4px 0;
+    color: #000;
+  }
+
+  #print-area .print-subtitle {
+    font-size: 10pt;
+    color: #555;
+    margin: 0 0 8px 0;
+  }
+
+  #print-area .print-date {
+    font-size: 9pt;
+    color: #777;
+    margin: 0;
+  }
+
+  #print-area .print-meta {
+    font-size: 9pt;
+    color: #777;
+    margin: 2px 0 0 0;
+  }
+
+  #print-area .print-metrics {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  #print-area .print-metric {
+    flex: 1;
+    padding: 8px 10px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  #print-area .print-metric-label {
+    display: block;
+    font-size: 8pt;
+    color: #666;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  #print-area .print-metric-value {
+    display: block;
+    font-size: 14pt;
+    font-weight: bold;
+    color: #000;
+  }
+
+  #print-area .print-section-title {
+    font-size: 13pt;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ccc;
+    color: #000;
+  }
+
+  #print-area .print-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    font-size: 9pt;
+  }
+
+  #print-area .print-table th {
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 6px 8px;
+    text-align: left;
+    font-weight: bold;
+    color: #000;
+  }
+
+  #print-area .print-table td {
+    border: 1px solid #ccc;
+    padding: 5px 8px;
+    color: #000;
+  }
+
+  #print-area .print-table tr {
+    page-break-inside: avoid;
+  }
+
+  #print-area .print-company {
+    font-size: 8pt;
+    color: #666;
+  }
+
+  #print-area .print-correlation {
+    font-size: 8pt;
+  }
+
+  #print-area .print-correlation td,
+  #print-area .print-correlation th {
+    text-align: center;
+    min-width: 30px;
+  }
+
+  #print-area .print-correlation-label {
+    font-weight: bold;
+    text-align: left !important;
+  }
+
+  #print-area .print-disclaimer {
+    margin-top: 25px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    font-size: 8pt;
+    color: #888;
+    font-style: italic;
+  }
+
+  #print-area .print-charts svg text {
+    fill: #000 !important;
+  }
+
+  #print-area .print-charts svg .recharts-cartesian-grid-horizontal line,
+  #print-area .print-charts svg .recharts-cartesian-grid-vertical line {
+    stroke: #ccc !important;
+  }
+
+  #print-area .print-charts svg .recharts-default-tooltip {
+    background: #fff !important;
+    border: 1px solid #ccc !important;
+  }
+
+  #print-area .print-charts svg .recharts-tooltip-label,
+  #print-area .print-charts svg .recharts-tooltip-item {
+    color: #000 !important;
+  }
+}
