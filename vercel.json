@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/api/yahoo/(.*)", "destination": "/api/yahoo/[...path].js" },
+    { "source": "/api/yahoo2/(.*)", "destination": "/api/yahoo2/[...path].js" }
+  ]
+}
