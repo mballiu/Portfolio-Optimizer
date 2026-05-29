@@ -2,6 +2,8 @@
 
 A web application for optimizing investment portfolios using Modern Portfolio Theory (Markowitz). Built with React 19, Vite, Tailwind CSS, Recharts, and mathjs.
 
+**Live demo:** [portfolio-optimizer-pied.vercel.app](https://portfolio-optimizer-pied.vercel.app/)
+
 ## Features
 
 - **Portfolio Optimization** — Solve for Minimum Variance or Maximum Sharpe Ratio portfolios using quadratic programming.
